@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "hals-arcane",
+  "version": "${version}",
+  "name": "Hal's Arcane",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/hals-arcane/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "hal.halsArcane.client.HalsArcaneClient"
+    ],
+    "main": [
+      "hal.halsArcane.HalsArcane"
+    ]
+  },
+  "mixins": [
+    "hals-arcane.mixins.json",
+    {
+      "config": "hals-arcane.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
